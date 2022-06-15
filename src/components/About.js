@@ -1,5 +1,6 @@
 import React from "react";
 import Links from "./Links";
+import user from "../data/user";
 
 function About(props) {
   if (!props.bio){
@@ -7,7 +8,7 @@ function About(props) {
       <div id="about">
       <h2>About Me</h2>
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      <Links github="https://github.com/KDev-inAugust/react-hooks-props-basics-lab" linkedin="https://www.linkedin.com/feed/" />
+      <Links github={user.links.github} linkedin={user.links.linkedin} />
     </div>
     )
   }
@@ -16,7 +17,7 @@ function About(props) {
       <h2>About Me</h2>
       <p>{props.bio}</p>
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      <Links github="https://github.com/KDev-inAugust/react-hooks-props-basics-lab" linkedin="https://www.linkedin.com/feed/"/>
+      <Links github={user.links.github} linkedin={user.links.linkedin} />
     </div>
   );
 }
